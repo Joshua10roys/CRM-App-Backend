@@ -3,7 +3,6 @@ import jwt from 'jsonwebtoken';
 import randomToken from 'random-token';
 import { createUser, doesUserExist, doesEmailIdExist, saveRandomTokenInDb, findUserByRandomToken } from '../database/db.js'
 import { sendPassResetMain } from '../helper/mail.js'
-import session from 'cookie-session'
 
 async function genHashPassword(password) {
     const salt = await bcrypt.genSalt(5);
